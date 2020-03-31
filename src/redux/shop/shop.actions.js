@@ -1,6 +1,15 @@
 import ShopActionTypes from "./shop.types";
 
-export const updateCollections = collections => ({
-  type: ShopActionTypes.UPDATE_COLLECTION,
-  payload: collections
+export const fetchCollectionStart = () => ({
+  type: ShopActionTypes.FETCH_COLLECTIONS_START
+});
+
+export const fetchCollectionSuccess = collectionMap => ({
+  type: ShopActionTypes.FETCH_COLLECTIONS_SUCCESS,
+  payload: collectionMap
+});
+
+export const fetchCollectionFailure = errorMessage => ({
+  type: ShopActionTypes.FETCH_COLLECTIONS_FAILURE,
+  payload: errorMessage
 });
